@@ -11,10 +11,7 @@ class Pages extends CI_Controller {
 
     public function index()
     {
-        $this->load->library('functions');
-        $log = $this->functions->GetHost();
-
-        echo getcwd();
+     $this->load->view('home');
     }
 }
 

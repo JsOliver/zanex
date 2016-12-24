@@ -72,16 +72,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
+
 $where = getcwd();
 
 
-if ($where === '/Users/octhaviomartins/Dropbox/Phurshell/htdocs/novanota' || $where === '/Applications/XAMPP/xamppfiles/htdocs/notanova') {
+if ($where === 'C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\projects\zanex') {
     $db['default'] = array(
         'dsn' => '',
         'hostname' => 'localhost',
-        'username' => '',
+        'username' => 'root',
         'password' => '',
-        'database' => '',
+        'database' => 'zapp',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
@@ -101,7 +102,7 @@ if ($where === '/Users/octhaviomartins/Dropbox/Phurshell/htdocs/novanota' || $wh
 
     $db['default'] = array(
         'dsn' => '',
-        'hostname' => 'localhost',
+        'hostname' => '',
         'username' => '',
         'password' => '',
         'database' => '',
