@@ -53,7 +53,16 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+
+$where = getcwd();
+if($where == 'C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\projects\zanex'):
+    define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+
+else:
+    define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
+
+endif;
+
 
 /*
  *---------------------------------------------------------------

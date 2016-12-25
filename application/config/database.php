@@ -74,15 +74,14 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $where = getcwd();
+if($where == 'C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\projects\zanex'):
 
-
-if ($where === 'C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\projects\zanex') {
     $db['default'] = array(
         'dsn' => '',
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'zapp',
+        'database' => 'zapp_clients',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
@@ -98,18 +97,84 @@ if ($where === 'C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\p
         'failover' => array(),
         'save_queries' => TRUE
     );
-}else{
+
+    $db['data2'] = array(
+        'dsn' => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'zapp_stores',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT !== 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
+    );
+
+    $db['data3'] = array(
+        'dsn' => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'zapp_provider',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT !== 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
+    );
+
+    $db['data4'] = array(
+        'dsn' => '',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'zapp_admin',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT !== 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
+    );
+else:
 
     $db['default'] = array(
         'dsn' => '',
-        'hostname' => '',
-        'username' => '',
-        'password' => '',
-        'database' => '',
+        'hostname' => 'mysql427.umbler.com',
+        'username' => 'zapp',
+        'password' => 'joao0048',
+        'database' => 'zapp_clients',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
-        'db_debug' => (ENVIRONMENT !== 'production'),
+        'db_debug' => (ENVIRONMENT == 'production'),
         'cache_on' => FALSE,
         'cachedir' => '',
         'char_set' => 'utf8',
@@ -122,8 +187,75 @@ if ($where === 'C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\data\localweb\p
         'save_queries' => TRUE
     );
 
+    $db['data2'] = array(
+        'dsn' => '',
+        'hostname' => 'mysql427.umbler.com',
+        'username' => 'zapp2',
+        'password' => 'joao0048',
+        'database' => 'zapp_stores',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT == 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
+    );
+
+    $db['data3'] = array(
+        'dsn' => '',
+        'hostname' => 'mysql427.umbler.com',
+        'username' => 'zapp3',
+        'password' => 'joao0048',
+        'database' => 'zapp_provider',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT == 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
+    );
+
+    $db['data4'] = array(
+        'dsn' => '',
+        'hostname' => 'mysql427.umbler.com',
+        'username' => 'zapp4',
+        'password' => 'joao0048',
+        'database' => 'zapp_admin',
+        'dbdriver' => 'mysqli',
+        'dbprefix' => '',
+        'pconnect' => FALSE,
+        'db_debug' => (ENVIRONMENT == 'production'),
+        'cache_on' => FALSE,
+        'cachedir' => '',
+        'char_set' => 'utf8',
+        'dbcollat' => 'utf8_general_ci',
+        'swap_pre' => '',
+        'encrypt' => FALSE,
+        'compress' => FALSE,
+        'stricton' => FALSE,
+        'failover' => array(),
+        'save_queries' => TRUE
+    );
+
+    endif;
 
 
 
-}
+
 
