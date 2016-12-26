@@ -13,12 +13,12 @@ class Pages extends CI_Controller {
 
     public function index()
     {
-     $this->load->view('home');
+     $this->load->view('index');
     }
 
     public function image(){
         $allowed = 'jpge,jpg,png,gif';
-         $upload = $this->Storex_model->upload('pp','default','image_profile',$_FILES['fileUpload'],$allowed,3000000);
+         $upload = $this->Storex_model->upload('pp','default','image_profile',$_FILES['fileUpload'],$allowed,3);
         echo $upload;
 
     }
@@ -31,9 +31,7 @@ class Pages extends CI_Controller {
         $query = $data3->get();
         $fetch = $query->result_array();
         header("content-type: ".$fetch[0]['ext']."");
-
         echo $fetch[0]['file'];
-        //echo '<img src="'.base_url('').'data:image/jpeg;base64,'.base64_encode($fetch[0]['image'] ).'"/>';
 
     }
 

@@ -21,48 +21,6 @@ class Storex {
 
     }
 
-
-    public function validateup($file,$allowed,$max_size){
-
-
-                $filex = $file['tmp_name'];
-                $size = $file['size'];
-                $type = $file['type'];
-                $name = $file['name'];
-
-                      $extension = pathinfo ( $name, PATHINFO_EXTENSION );
-                      $extension = strtolower ( $extension );
-                      if (strstr($allowed, $extension )):
-
-                           $data_client = $this->load->database('default', TRUE);
-                           $date['image'] = file_get_contents(addslashes($filex));
-                           $date['name'] = 'pp';
-                           $date['ext'] = $extension;
-                           $date['type'] = $type;
-                           $date['date'] = date('d/m/Y H:i:s');
-
-                        $data_client->insert('image_profile',$date);
-                           $return = $data_client->insert_id();
-
-                          if( $return > 0){
-                           return $return;
-                       }else
-                       {
-                           return 0;
-                       }
-
-
-
-
-              else:
-
-                  return 0;
-
-              endif;
-
-
-    }
-
 }
 
 
